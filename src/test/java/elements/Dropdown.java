@@ -22,7 +22,7 @@ public class Dropdown {
     }
 
     public String getText() {
-        return $(byXpath(String.format(locatorForGetInfo, label))).val();
+        return $(byXpath(String.format(locatorForGetInfo, label))).text();
     }
 
 }

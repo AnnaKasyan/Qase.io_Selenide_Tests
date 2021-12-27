@@ -17,8 +17,8 @@ public class EditTestCasePage {
         TestCase testCase = new TestCase();
         testCase.setTitle(TITLE.val());
         testCase.setDescription(new Placeholder("description").getText());
-        testCase.setPre_conditions(new Placeholder("description").getText());
-        testCase.setPost_conditions(new Placeholder("description").getText());
+        testCase.setPre_conditions(new Placeholder("pre-condition").getText());
+        testCase.setPost_conditions(new Placeholder("post-condition").getText());
         testCase.setPriority(new Dropdown("priority").getText());
         testCase.setSeverity(new Dropdown("severity").getText());
         testCase.setType(new Dropdown("type").getText());

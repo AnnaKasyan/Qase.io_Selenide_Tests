@@ -18,6 +18,6 @@ public class Placeholder {
     }
 
     public String getText() {
-        return $(byXpath(String.format(locatorForGetInfo, label))).val();
+        return $(byXpath(String.format(locatorForGetInfo, label))).getText();
     }
 }

@@ -9,7 +9,7 @@ public class Dropdown {
 
     protected String label;
     final String dropdownElementLocator = "//*[@id='%s" + "Group']//div [@style='display: inline-block;']/input";
-    final String locatorForGetInfo = "//*[@id='%s" + "Group']//following-sibling::text()";
+    final String locatorForGetInfo = "//*[@id='%s" + "Group']//div[contains(@class,'-container')]";
 
     public Dropdown(String label) {
         this.label = label;
@@ -22,7 +22,7 @@ public class Dropdown {
     }
 
     public String getText() {
-        return $(byXpath(String.format(locatorForGetInfo, label))).text();
+        return $(byXpath(String.format(locatorForGetInfo, label))).getText();
     }
 
 }

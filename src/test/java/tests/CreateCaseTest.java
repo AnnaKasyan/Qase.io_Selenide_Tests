@@ -35,7 +35,7 @@ public class CreateCaseTest extends BaseTest {
                 .openDetailsTestCase();
         TestCase actualDetailsTestCase = selectedProjectPage.clickEditCaseButton()
                 .getTestCaseDetails();
-        editTestCasePage.clickCancelButton();
+        editTestCasePage.clickCancelButton().clickCloseButton();
         assertEquals(actualDetailsTestCase, TestDataHelper.getTestCaseData());
     }
 }

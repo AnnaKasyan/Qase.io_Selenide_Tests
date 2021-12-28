@@ -12,6 +12,7 @@ public class EditTestCasePage {
 
     final static SelenideElement TITLE = $("#title");
     final static SelenideElement CANCEL_BUTTON = $(byXpath("//button[text()='Cancel']"));
+    final static SelenideElement CLOSE_BUTTON = $(byXpath("//button[text()='Close form']"));
 
     public TestCase getTestCaseDetails() {
         TestCase testCase = new TestCase();
@@ -26,8 +27,13 @@ public class EditTestCasePage {
         return testCase;
     }
 
-    public SelectedProjectPage clickCancelButton() {
+    public EditTestCasePage clickCancelButton() {
         CANCEL_BUTTON.click();
+        return this;
+    }
+
+    public SelectedProjectPage clickCloseButton() {
+        CLOSE_BUTTON.click();
         return new SelectedProjectPage();
     }
 }

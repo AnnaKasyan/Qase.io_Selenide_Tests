@@ -20,8 +20,8 @@ public class CreateTestCasePage {
     public CreateTestCasePage fillForm(TestCase testCase) {
         write(TITLE, testCase.getTitle());
         new Placeholder("description").write(testCase.getDescription());
-        new Placeholder("pre-condition").write(testCase.getDescription());
-        new Placeholder("post-condition").write(testCase.getDescription());
+        new Placeholder("pre-condition").write(testCase.getPre_conditions());
+        new Placeholder("post-condition").write(testCase.getPost_conditions());
         new Dropdown("severity").selectOption(testCase.getSeverity());
         new Dropdown("priority").selectOption(testCase.getPriority());
         new Dropdown("type").selectOption(testCase.getType());

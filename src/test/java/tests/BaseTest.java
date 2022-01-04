@@ -18,7 +18,6 @@ public abstract class BaseTest {
     public void setUp() {
         Configuration.baseUrl = "https://app.qase.io";
         Configuration.browser = "chrome";
-        Configuration.headless = true;
         Configuration.startMaximized = true;
         Configuration.timeout = 10000;
         loginPage = new LoginPage();

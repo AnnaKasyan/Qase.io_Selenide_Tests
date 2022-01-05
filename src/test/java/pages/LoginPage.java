@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
@@ -12,7 +13,7 @@ public class LoginPage {
     final static SelenideElement PASSWORD_INOUT = $("#inputPassword");
 
     public void navigate() {
-        open(baseUrl+"/login");
+      open ( "/login");
     }
 
     public ProjectsPage login(String username, String password) {

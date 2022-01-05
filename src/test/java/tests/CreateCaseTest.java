@@ -27,15 +27,16 @@ public class CreateCaseTest extends BaseTest {
 
     @Test
     public void createTestCaseTest() {
+        TestCase testCase = TestDataHelper.getTestCaseData();
         projectsPage.chooseProject();
         selectedProjectPage.isProductsPageOpened()
                 .clickCreateCaseButton()
-                .fillForm(TestDataHelper.getTestCaseData())
+                .fillForm(testCase)
                 .clickSaveButton()
                 .openDetailsTestCase();
         TestCase actualDetailsTestCase = selectedProjectPage.clickEditCaseButton()
                 .getTestCaseDetails();
         editTestCasePage.clickCancelButton().clickCloseButton();
-        assertEquals(actualDetailsTestCase, TestDataHelper.getTestCaseData());
+        assertEquals(actualDetailsTestCase, testCase);
     }
 }

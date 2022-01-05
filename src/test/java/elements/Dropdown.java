@@ -16,9 +16,7 @@ public class Dropdown {
     }
 
     public void selectOption(String text) {
-        SelenideElement option = $(byXpath(String.format(dropdownElementLocator, label)));
-        option.click();
-        option.setValue(text).pressEnter();
+        $(byXpath(String.format(dropdownElementLocator, label))).setValue(text).pressEnter();
     }
 
     public String getText() {
